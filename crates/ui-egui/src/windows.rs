@@ -800,7 +800,7 @@ fn about(app: &mut TextureCraftApp, ctx: &egui::Context) {
             ui.label(tr("Free and open source (MIT OR Apache-2.0), written in Rust."));
             ui.add_space(6.0);
             ui.hyperlink_to(tr("Join the crocwork community on Discord"), "https://github.com/CROC101/crocwork-texture");
-            ui.hyperlink_to("getartcraft.com/apps/texturecraft", "https://github.com/CROC101/crocwork-texture");
+            ui.hyperlink_to("github.com/CROC101/crocwork-texture", "https://github.com/CROC101/crocwork-texture");
             ui.add_space(6.0);
             ui.label(RichText::new(tr("Made by the crocwork team and community.")).color(tk.text_dim));
         });
