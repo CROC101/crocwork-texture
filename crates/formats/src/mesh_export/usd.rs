@@ -433,7 +433,7 @@ fn usda_prim(s: &mut String, p: &UsdPrim, depth: usize) {
 /// The layer as `.usda` text.
 pub(crate) fn usda(layer: &UsdLayer) -> String {
     let mut s = format!(
-        "#usda 1.0\n(\n    defaultPrim = \"{}\"\n    doc = \"Exported by TextureCraft\"\n    metersPerUnit = 1\n    upAxis = \"Y\"\n)\n",
+        "#usda 1.0\n(\n    defaultPrim = \"{}\"\n    doc = \"Exported by crocwork Texture\"\n    metersPerUnit = 1\n    upAxis = \"Y\"\n)\n",
         layer.root.name
     );
     usda_prim(&mut s, &layer.root, 0);

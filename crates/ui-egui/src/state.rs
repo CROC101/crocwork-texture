@@ -111,12 +111,12 @@ pub struct Prefs {
     pub brightness: crate::theme::Brightness,
     /// The colour of what is on, chosen or focused.
     pub accent: crate::theme::Accent,
-    /// The system draws the window's title bar instead of TextureCraft (desktop; read at startup).
+    /// The system draws the window's title bar instead of crocwork Texture (desktop; read at startup).
     pub system_title_bar: bool,
     /// Show the start window at launch.
     pub start_window: bool,
     /// Where autosaves, smart materials, presets, templates and layouts go (desktop; read at
-    /// startup). Empty or relative: `Documents/TextureCraft`.
+    /// startup). Empty or relative: `Documents/crocwork Texture`.
     pub data_folder: String,
     /// Cores a project save leaves to the UI; Settings bounds this to the available logical CPUs
     /// (desktop). At least one save worker always runs.
@@ -429,7 +429,7 @@ mod tests {
     #[test]
     fn the_data_folder_is_an_absolute_choice_or_documents_texturecraft() {
         let default = crate::data_folder("");
-        assert!(default.ends_with(std::path::Path::new("Documents").join("TextureCraft")));
+        assert!(default.ends_with(std::path::Path::new("Documents").join("crocwork Texture")));
         assert_eq!(crate::data_folder("relative/dir"), default, "a relative path is not a choice");
         let chosen = std::env::temp_dir().join("tc-data");
         assert_eq!(crate::data_folder(&format!(" {} ", chosen.display())), chosen);

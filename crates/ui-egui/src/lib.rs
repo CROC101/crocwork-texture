@@ -1,6 +1,6 @@
 //! # texturecraft-ui-egui
 //!
-//! The TextureCraft desktop and web shell: a dense dark professional layout (menu bar,
+//! The crocwork Texture desktop and web shell: a dense dark professional layout (menu bar,
 //! tool-settings bar, tool shelf, asset shelf, 3D + 2D viewports, texture set list, layer stack,
 //! properties, display/shader/history windows, bake mode). It is a thin layer: every action goes
 //! through `texturecraft-engine` commands, so the CLI, control channel and MCP can do the same.
@@ -82,7 +82,7 @@ pub use state::UiState;
 pub const UPDATE_APP: craft_update::App = craft_update::App {
     icon_png: Some(include_bytes!("../../../assets/app-icon/hicolor/128x128/apps/ai.storyteller.texturecraft.png")),
     accent: Some([0xc2, 0x67, 0x2b]),
-    ..craft_update::App::new("texturecraft", "TextureCraft", "3D texture painting", "storytold/texturecraft")
+    ..craft_update::App::new("texturecraft", "crocwork Texture", "3D texture painting", "storytold/texturecraft")
 };
 
 /// A texture set resize running on a worker thread (`Session::resize_task`).
@@ -104,7 +104,7 @@ pub const PAINTING_PAUSED: &str = i18n::n_("Painting is paused while a bake is s
 
 /// The browser build's notice when WebGPU is unavailable and wgpu fell back to WebGL2.
 pub const WEBGL_NOTICE: &str = i18n::n_(
-    "WebGPU isn't available in this browser, so TextureCraft runs on WebGL2: Rendering mode path traces on the CPU (slower) and large texture sets show at reduced resolution. A current Chrome, Edge or Safari has WebGPU.",
+    "WebGPU isn't available in this browser, so crocwork Texture runs on WebGL2: Rendering mode path traces on the CPU (slower) and large texture sets show at reduced resolution. A current Chrome, Edge or Safari has WebGPU.",
 );
 
 pub struct Toast {
@@ -745,7 +745,7 @@ impl eframe::App for TextureCraftApp {
 static DATA_FOLDER: std::sync::OnceLock<std::path::PathBuf> = std::sync::OnceLock::new();
 
 /// The data folder for a `Prefs::data_folder` value: that path when it is absolute, otherwise
-/// `Documents/TextureCraft` in the user's home folder.
+/// `Documents/crocwork Texture` in the user's home folder.
 #[cfg(not(target_arch = "wasm32"))]
 pub fn data_folder(pref: &str) -> std::path::PathBuf {
     let chosen = std::path::Path::new(pref.trim());
@@ -753,7 +753,7 @@ pub fn data_folder(pref: &str) -> std::path::PathBuf {
         return chosen.to_path_buf();
     }
     let home = std::env::var("USERPROFILE").or_else(|_| std::env::var("HOME")).unwrap_or_else(|_| ".".into());
-    std::path::Path::new(&home).join("Documents").join("TextureCraft")
+    std::path::Path::new(&home).join("Documents").join("crocwork Texture")
 }
 
 /// `<sub>` in the data folder in use (Settings › Folders › Data folder).

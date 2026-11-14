@@ -1,6 +1,6 @@
 //! # texturecraft-core
 //!
-//! The TextureCraft document model: a [`Project`] holds texture sets (one per mesh material),
+//! The crocwork Texture document model: a [`Project`] holds texture sets (one per mesh material),
 //! each with a stack of [`Layer`]s (paint, fill, group) whose channels blend with one of
 //! the [`BlendMode`]s. Pure data with serde; pixels live in `texturecraft-texel` images
 //! owned by the engine. [`blend`] is the CPU reference for every blend mode.
@@ -46,6 +46,6 @@ pub enum CoreError {
 pub type Result<T> = std::result::Result<T, CoreError>;
 
 /// Product name for user-facing text.
-pub const APP_NAME: &str = "TextureCraft";
+pub const APP_NAME: &str = "crocwork Texture";
 /// Native project file extension.
 pub const PROJECT_EXT: &str = "tcraft";

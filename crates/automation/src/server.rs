@@ -532,7 +532,7 @@ impl TexturecraftMcp {
 #[tool_handler(
     router = self.tool_router,
     name = "texturecraft",
-    instructions = "TextureCraft 3D texture painter. Every edit is an engine command: `command_list` shows ids and params, \
+    instructions = "crocwork Texture 3D texture painter. Every edit is an engine command: `command_list` shows ids and params, \
         `command_run`/`command_batch` run them. Start with `project_new` (built-in mesh) or `project_open`/`mesh_import` (files \
         relative to the workspace root), check your work with `session_inspect` and `viewport_render`, paint with `paint_stroke`, \
         bake with `bake` (high polys and the cage: `bake_mesh_add`), then `project_save` (.tcraft), `textures_export` and \

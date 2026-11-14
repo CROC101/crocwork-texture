@@ -1,6 +1,6 @@
 //! # texturecraft-formats
 //!
-//! Everything TextureCraft reads from or writes to disk:
+//! Everything crocwork Texture reads from or writes to disk:
 //!
 //! - [`mesh_import`]: glTF/GLB, FBX (6.x and 7.x, binary and ASCII), COLLADA, USD (usda, usdc,
 //!   usdz), Alembic (Ogawa), OBJ, PLY and STL into a
@@ -71,7 +71,7 @@ pub enum FormatError {
     TooLarge(String),
     #[error("invalid: {0}")]
     Invalid(String),
-    #[error("this file was saved by a newer TextureCraft (format {found}; this version reads up to {supported})")]
+    #[error("this file was saved by a newer crocwork Texture (format {found}; this version reads up to {supported})")]
     NewerVersion { found: u32, supported: u32 },
     #[error("I/O error: {0}")]
     Io(#[from] std::io::Error),

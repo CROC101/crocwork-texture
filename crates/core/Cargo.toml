@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-core"
-description = "TextureCraft document model: projects, texture sets, channels, layers, masks, effects and blend math"
+description = "crocwork Texture document model: projects, texture sets, channels, layers, masks, effects and blend math"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

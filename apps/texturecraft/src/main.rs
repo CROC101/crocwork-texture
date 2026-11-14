@@ -1,4 +1,4 @@
-//! TextureCraft desktop app.
+//! crocwork Texture desktop app.
 //!
 //! Usage: `texturecraft [project.tcraft | mesh.glb] [--control <port>] [--empty] [--version]`
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
@@ -15,7 +15,7 @@ use texturecraft_ui_egui::ui_state_store;
 use texturecraft_ui_egui::{TextureCraftApp, UiState};
 
 /// The app name eframe keeps the settings under (`eframe::storage_dir`).
-const APP_NAME: &str = "TextureCraft";
+const APP_NAME: &str = "crocwork Texture";
 
 /// The window's size when it opens, in points.
 const DEFAULT_SIZE: [f32; 2] = [1600.0, 960.0];
@@ -29,9 +29,9 @@ fn version() -> String {
     let short = sha.get(..7).unwrap_or(sha);
     let date = env!("TEXTURECRAFT_BUILD_DATE");
     match (short.is_empty(), date.is_empty()) {
-        (true, true) => format!("TextureCraft {}", texturecraft_engine::VERSION),
-        (true, false) => format!("TextureCraft {} ({date})", texturecraft_engine::VERSION),
-        _ => format!("TextureCraft {} ({short} {date})", texturecraft_engine::VERSION),
+        (true, true) => format!("crocwork Texture {}", texturecraft_engine::VERSION),
+        (true, false) => format!("crocwork Texture {} ({date})", texturecraft_engine::VERSION),
+        _ => format!("crocwork Texture {} ({short} {date})", texturecraft_engine::VERSION),
     }
 }
 
@@ -281,7 +281,7 @@ fn fatal(msg: &str, dialog: bool) {
         rfd::MessageDialog::new()
             .set_level(rfd::MessageLevel::Error)
             .set_title(APP_NAME)
-            .set_description(format!("{}\n\n{msg}{saved}", tr("TextureCraft had to close:")))
+            .set_description(format!("{}\n\n{msg}{saved}", tr("crocwork Texture had to close:")))
             .set_buttons(rfd::MessageButtons::Ok)
             .show();
     }

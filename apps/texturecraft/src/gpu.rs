@@ -1,7 +1,7 @@
 //! Graphics adapter selection and multi-GPU configuration (#49).
 //!
 //! On machines with multiple GPUs (e.g. hybrid laptops or dual-GPU desktops with Intel/AMD iGPU and
-//! NVIDIA/AMD dGPU), TextureCraft must allow users to select which graphics processor renders the
+//! NVIDIA/AMD dGPU), crocwork Texture must allow users to select which graphics processor renders the
 //! 3D viewport, and default to the high-performance discrete GPU for real-time PBR shading.
 //!
 //! Selection priority:

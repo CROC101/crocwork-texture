@@ -1,6 +1,6 @@
 //! # texturecraft-geom
 //!
-//! Geometry for TextureCraft: the [`Mesh`] type with normals and MikkTSpace tangents, built-in
+//! Geometry for crocwork Texture: the [`Mesh`] type with normals and MikkTSpace tangents, built-in
 //! [`primitives`] (material ball, sphere, cube, …), a [`Bvh`] for ray casts and box queries,
 //! the UV-space [`UvGBuffer`] that maps texels to surface points, and the [`OrbitCamera`].
 #![forbid(unsafe_code)]

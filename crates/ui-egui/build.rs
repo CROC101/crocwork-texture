@@ -9,7 +9,7 @@ mod i18n_build;
 use std::fmt::Write as _;
 use std::path::PathBuf;
 
-/// The UI faces TextureCraft embeds (family, style) per manifest: desktop, then web (the web build
+/// The UI faces crocwork Texture embeds (family, style) per manifest: desktop, then web (the web build
 /// has a download budget: of the CJK faces only the Japanese one, ~4.5 MB).
 const MANIFESTS: &[(&str, Faces, Faces)] = &[
     ("fonts/manifest.txt", &[("BIZ UDPGothic", "Regular"), ("Noto Sans CJK SC", "Regular"), ARABIC], &[("BIZ UDPGothic", "Regular"), ARABIC]),

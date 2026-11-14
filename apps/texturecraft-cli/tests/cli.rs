@@ -55,7 +55,7 @@ fn p(path: &Path) -> &str {
 #[test]
 fn version_and_usage_errors() {
     let v = ok(&["--version"]);
-    assert!(v.starts_with("TextureCraft "), "{v}");
+    assert!(v.starts_with("crocwork Texture "), "{v}");
     assert_eq!(v.lines().count(), 1);
     assert!(ok(&["--help"]).contains("texturecraft-cli mcp"));
     assert_eq!(cli(&[]).status.code(), Some(2));

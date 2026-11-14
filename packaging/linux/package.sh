@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build and package TextureCraft for Linux (x86_64, aarch64 or cross-compiled riscv64):
+# Build and package crocwork Texture for Linux (x86_64, aarch64 or cross-compiled riscv64):
 #
 #   $DIST/texturecraft-<version>-linux-<arch>.AppImage  any distro with glibc >= the build host's
 #   $DIST/texturecraft-<version>-linux-<arch>.AppImage.zsync  delta updates (needs zsyncmake)
@@ -37,10 +37,10 @@ case "$ARCH" in
   aarch64 | arm64) ARCH=aarch64; DEB_ARCH=arm64 ;;
   *) echo "unsupported architecture $ARCH" >&2; exit 2 ;;
 esac
-export TEXTURECRAFT_MAINTAINER="${TEXTURECRAFT_MAINTAINER:-TextureCraft maintainers <texturecraft@storyteller.ai>}"
+export TEXTURECRAFT_MAINTAINER="${TEXTURECRAFT_MAINTAINER:-crocwork Texture maintainers <texturecraft@storyteller.ai>}"
 BASENAME="texturecraft-$VERSION-linux-$ARCH"
 
-echo "==> TextureCraft $VERSION for Linux $ARCH ($FORMATS)"
+echo "==> crocwork Texture $VERSION for Linux $ARCH ($FORMATS)"
 
 if [[ "$SKIP_BUILD" = 0 ]]; then
   (cd "$ROOT" && cargo build --release --locked -p texturecraft -p texturecraft-cli ${CROSS_TARGET:+--target "$CROSS_TARGET"})
@@ -97,7 +97,7 @@ fi
 
 # ---- AppImage -----------------------------------------------------------------------------------
 if has appimage; then
-  APPDIR="$WORK/TextureCraft.AppDir"
+  APPDIR="$WORK/crocwork Texture.AppDir"
   cp -R "$STAGE" "$APPDIR"
   mv "$APPDIR/usr/share/doc" "$WORK/doc-unused"
   # AppRun is a script, not a symlink: it installs the .desktop entry and icons into

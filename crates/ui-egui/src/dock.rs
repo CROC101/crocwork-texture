@@ -1835,7 +1835,7 @@ fn link_properties(app: &mut TextureCraftApp, ui: &mut Ui, layer: LayerId, link:
                 .and_then(|b| std::fs::write(&path, b.as_slice()).map_err(|e| texturecraft_engine::EngineError::Other(e.to_string())))
                 .and_then(|()| texturecraft_engine::link_cmds::open_in_materialcraft(&path));
             match opened {
-                Ok(()) => app.toast(tr("Opened in MaterialCraft: use File > Send to TextureCraft there to bring your changes back"), false),
+                Ok(()) => app.toast(tr("Opened in MaterialCraft: use File > Send to crocwork Texture there to bring your changes back"), false),
                 Err(e) => app.toast(e.to_string(), true),
             }
         }

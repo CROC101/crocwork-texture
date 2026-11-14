@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-geom"
-description = "TextureCraft geometry: meshes, primitives, tangents, BVH ray casts, UV G-buffer, camera"
+description = "crocwork Texture geometry: meshes, primitives, tangents, BVH ray casts, UV G-buffer, camera"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

@@ -53,7 +53,7 @@ pub fn generate(dir: Option<&Path>, required: bool) -> Result<String, String> {
         count += 1;
     }
     if required && count == 0 {
-        return Err("no TextureCraft translation catalogs found".into());
+        return Err("no crocwork Texture translation catalogs found".into());
     }
     // Reject the same rows the runtime would skip, before required builds can ship English fallbacks.
     let (runtime, mut problems) = craft_i18n::I18n::new(Box::leak(catalogs.into_boxed_slice()), &[]);

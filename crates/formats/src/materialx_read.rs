@@ -1,9 +1,9 @@
-//! Reading a MaterialX (`.mtlx`) material into TextureCraft's channels, written from the ASWF
+//! Reading a MaterialX (`.mtlx`) material into crocwork Texture's channels, written from the ASWF
 //! MaterialX specification (1.39) and the OpenPBR Surface and glTF PBR node definitions. Pure
 //! Rust: no MaterialX library is linked.
 //!
 //! [`read_materialx`] finds a `surfacematerial`, follows its `surfaceshader` to an
-//! `open_pbr_surface`, `standard_surface` or `gltf_pbr` node, and turns each input TextureCraft
+//! `open_pbr_surface`, `standard_surface` or `gltf_pbr` node, and turns each input crocwork Texture
 //! has a channel for into a literal value or an image file:
 //!
 //! - a literal `value` becomes a constant (`color3` values tagged `srgb_texture` are converted

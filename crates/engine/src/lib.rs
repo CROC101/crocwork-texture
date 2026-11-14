@@ -1,6 +1,6 @@
 //! # texturecraft-engine
 //!
-//! The TextureCraft session: a [`Session`] owns the document (project + copy-on-write pixels +
+//! The crocwork Texture session: a [`Session`] owns the document (project + copy-on-write pixels +
 //! baked maps), the mesh with its BVH and per-texture-set caches (UV G-buffer, padding map,
 //! composite), snapshot-based undo, the tool state and the active stroke. Every user-visible
 //! action is a command in the [`commands`] registry, dispatched by id from the UI, the CLI,

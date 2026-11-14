@@ -1,4 +1,4 @@
-//! Headless TextureCraft command line: inspect, script, bake, export and render projects, and
+//! Headless crocwork Texture command line: inspect, script, bake, export and render projects, and
 //! serve agents over MCP or JSON lines. Never opens a window.
 #![forbid(unsafe_code)]
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
@@ -13,7 +13,7 @@ use texturecraft_engine::core::PROJECT_EXT;
 use texturecraft_engine::formats::{MeshReport, import_mesh, import_mesh_bytes, mesh_report};
 
 const USAGE: &str = "\
-texturecraft-cli: headless TextureCraft
+texturecraft-cli: headless crocwork Texture
 
 USAGE:
   texturecraft-cli --version
@@ -114,9 +114,9 @@ fn version() -> String {
     let short = sha.get(..7).unwrap_or(sha);
     let date = env!("TEXTURECRAFT_BUILD_DATE");
     match (short.is_empty(), date.is_empty()) {
-        (true, true) => format!("TextureCraft {}", texturecraft_engine::VERSION),
-        (true, false) => format!("TextureCraft {} ({date})", texturecraft_engine::VERSION),
-        _ => format!("TextureCraft {} ({short} {date})", texturecraft_engine::VERSION),
+        (true, true) => format!("crocwork Texture {}", texturecraft_engine::VERSION),
+        (true, false) => format!("crocwork Texture {} ({date})", texturecraft_engine::VERSION),
+        _ => format!("crocwork Texture {} ({short} {date})", texturecraft_engine::VERSION),
     }
 }
 

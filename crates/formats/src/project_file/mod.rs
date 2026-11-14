@@ -569,7 +569,7 @@ fn load_with_budget<R: Read + Seek>(reader: R, mut budget: LoadBudget) -> Result
 
     if recovered {
         pf.warnings.push(
-            "Warning: Some project settings or mesh maps could not be imported. TextureCraft recovered what it could, using defaults where needed.".into(),
+            "Warning: Some project settings or mesh maps could not be imported. crocwork Texture recovered what it could, using defaults where needed.".into(),
         );
     }
 

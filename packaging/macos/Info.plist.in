@@ -7,11 +7,11 @@
   <key>CFBundleDevelopmentRegion</key>
   <string>en</string>
   <key>CFBundleDisplayName</key>
-  <string>TextureCraft</string>
+  <string>crocwork Texture</string>
   <key>CFBundleName</key>
-  <string>TextureCraft</string>
+  <string>crocwork Texture</string>
   <key>CFBundleExecutable</key>
-  <string>TextureCraft</string>
+  <string>crocwork Texture</string>
   <key>CFBundleIdentifier</key>
   <string>ai.storyteller.texturecraft</string>
   <key>CFBundleInfoDictionaryVersion</key>
@@ -29,7 +29,7 @@
   <key>TextureCraftBuildCommit</key>
   <string>@BUILD_SHA@</string>
   <key>CFBundleIconFile</key>
-  <string>TextureCraft</string>
+  <string>crocwork Texture</string>
   <key>LSApplicationCategoryType</key>
   <string>public.app-category.graphics-design</string>
   <!-- Must match MACOSX_DEPLOYMENT_TARGET in package.sh. Big Sur is the first release on
@@ -45,21 +45,21 @@
   <key>NSHumanReadableCopyright</key>
   <string>Copyright © the TextureCraft contributors. MIT OR Apache-2.0.</string>
 
-  <!-- TextureCraft's own project format (a zip container). -->
+  <!-- crocwork Texture's own project format (a zip container). -->
   <key>UTExportedTypeDeclarations</key>
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
       <string>ai.storyteller.texturecraft.project</string>
       <key>UTTypeDescription</key>
-      <string>TextureCraft Project</string>
+      <string>crocwork Texture Project</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
         <string>public.content</string>
       </array>
       <key>UTTypeIconFile</key>
-      <string>TextureCraft</string>
+      <string>crocwork Texture</string>
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.filename-extension</key>
@@ -224,13 +224,13 @@
   <array>
     <dict>
       <key>CFBundleTypeName</key>
-      <string>TextureCraft Project</string>
+      <string>crocwork Texture Project</string>
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>LSHandlerRank</key>
       <string>Owner</string>
       <key>CFBundleTypeIconFile</key>
-      <string>TextureCraft</string>
+      <string>crocwork Texture</string>
       <key>LSItemContentTypes</key>
       <array><string>ai.storyteller.texturecraft.project</string></array>
     </dict>

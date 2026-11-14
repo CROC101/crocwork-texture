@@ -617,7 +617,7 @@ impl Project {
     /// Check structural invariants (ids exist, no layer appears twice). Used after loading.
     pub fn validate(&self) -> Result<()> {
         if self.format_version > FORMAT_VERSION {
-            return Err(CoreError::Invalid(format!("project format {} is newer than this TextureCraft supports ({FORMAT_VERSION})", self.format_version)));
+            return Err(CoreError::Invalid(format!("project format {} is newer than this crocwork Texture supports ({FORMAT_VERSION})", self.format_version)));
         }
         if let Some(t) = self.texture_sets.iter().find(|t| !t.uv_tiles.is_empty() && (t.tile_grid().is_none() || !t.uv_tiles.is_sorted_by(|a, b| a < b))) {
             return Err(CoreError::Invalid(format!("texture set \"{}\" has invalid UV tiles {:?}", t.name, t.uv_tiles)));

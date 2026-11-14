@@ -1,14 +1,14 @@
-# Flatpak manifest for TextureCraft, ready for a Flathub submission.
+# Flatpak manifest for crocwork Texture, ready for a Flathub submission.
 #
 # Flatpak builds run offline, so the crate sources must be vendored first. From the repo root:
 #
 #   curl -fsSLO https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/cargo/flatpak-cargo-generator.py
 #   python3 flatpak-cargo-generator.py Cargo.lock -o packaging/linux/flatpak/cargo-sources.json
-#   flatpak-builder --user --install --force-clean build-flatpak packaging/linux/flatpak/ai.storyteller.TextureCraft.yml
+#   flatpak-builder --user --install --force-clean build-flatpak packaging/linux/flatpak/ai.storyteller.crocwork Texture.yml
 #   flatpak run ai.storyteller.texturecraft
 #
 # For Flathub, replace the `dir` source with a `git` source pinned to a release tag and commit.
-# The single-file .flatpak attached to each release comes from ai.storyteller.TextureCraft.bundle.yml,
+# The single-file .flatpak attached to each release comes from ai.storyteller.crocwork Texture.bundle.yml,
 # which repackages the prebuilt release binaries. Keep runtime-version and finish-args identical.
 id: ai.storyteller.texturecraft
 runtime: org.freedesktop.Platform
@@ -19,7 +19,7 @@ sdk-extensions:
 command: texturecraft
 finish-args:
   # Honor the launcher's pinned and nightly version choices before offering updates.
-  - --filesystem=xdg-data/ArtCraft/versions:ro
+  - --filesystem=xdg-data/crocwork/versions:ro
   # Release checks and downloads use HTTPS.
   - --share=network
   # The shared updater inspects and updates this installation via flatpak-spawn --host.

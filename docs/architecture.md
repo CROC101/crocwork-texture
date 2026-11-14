@@ -1,6 +1,6 @@
 # Architecture
 
-TextureCraft is a 3D texture painter: import a mesh, paint PBR material channels on its surface
+crocwork Texture is a 3D texture painter: import a mesh, paint PBR material channels on its surface
 in layers with masks, bake mesh maps that drive procedural masks, and export game-ready textures.
 This document explains how the pieces fit together.
 

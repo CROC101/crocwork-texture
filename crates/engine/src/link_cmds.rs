@@ -232,7 +232,7 @@ fn quiet(program: &std::path::Path) -> std::process::Command {
 pub fn open_in_materialcraft(package: &std::path::Path) -> Result<()> {
     let app = materialcraft_tool("materialcraft", "MATERIALCRAFT");
     quiet(&app).arg(package).spawn().map(drop).map_err(|e| {
-        EngineError::Other(format!("MaterialCraft ({}) did not start: {e}. Install MaterialCraft next to TextureCraft or set MATERIALCRAFT", app.display()))
+        EngineError::Other(format!("MaterialCraft ({}) did not start: {e}. Install MaterialCraft next to crocwork Texture or set MATERIALCRAFT", app.display()))
     })
 }
 
@@ -262,7 +262,7 @@ impl LinkJob {
             let cli = materialcraft_tool("materialcraft-cli", "MATERIALCRAFT_CLI");
             let run = quiet(&cli).arg("run").arg(&src).arg("file.exportMaterial").arg(params.to_string()).output().map_err(|e| {
                 other(format!(
-                    "MaterialCraft's command line ({}) did not start: {e}. Install MaterialCraft next to TextureCraft or set MATERIALCRAFT_CLI",
+                    "MaterialCraft's command line ({}) did not start: {e}. Install MaterialCraft next to crocwork Texture or set MATERIALCRAFT_CLI",
                     cli.display()
                 ))
             })?;
@@ -310,7 +310,7 @@ impl Session {
         let m = read_mcmat(bytes).map_err(|e| EngineError::Other(e.to_string()))?;
         let maps = decoded_maps(&m)?;
         if maps.is_empty() {
-            return Err(EngineError::Other(format!("{} has no maps TextureCraft can paint with", m.manifest.name)));
+            return Err(EngineError::Other(format!("{} has no maps crocwork Texture can paint with", m.manifest.name)));
         }
         let label = format!("Add {}", m.manifest.name);
         let (id, names) = self.edit(&label, |s| {

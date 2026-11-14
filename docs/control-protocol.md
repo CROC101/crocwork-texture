@@ -1,6 +1,6 @@
 # Control protocol, MCP and CLI
 
-Everything TextureCraft does is an engine command with a stable id (`layer.add.fill`,
+Everything crocwork Texture does is an engine command with a stable id (`layer.add.fill`,
 `bake.run`, `edit.undo`, …). Agents and scripts reach the same commands four ways:
 
 | Surface | Start it with | Use it for |
@@ -273,7 +273,7 @@ In `claude_desktop_config.json` (Settings › Developer › Edit Config), with a
 {
   "mcpServers": {
     "texturecraft": {
-      "command": "C:\\Program Files\\TextureCraft\\texturecraft-cli.exe",
+      "command": "C:\\Program Files\\crocwork Texture\\texturecraft-cli.exe",
       "args": ["mcp", "--read-root", "C:\\Users\\me\\Texturing", "--write-root", "C:\\Users\\me\\Texturing"]
     }
   }
@@ -337,7 +337,7 @@ not code.
 | `material.link.saveSource` | `{layer?, path}`: the `.mcraft` package, to open in MaterialCraft |
 
 Re-cooks run `materialcraft-cli run <package> file.exportMaterial {path, size, values, inputs}`:
-`$MATERIALCRAFT_CLI`, else `materialcraft-cli` next to the TextureCraft executable, else on `PATH`
+`$MATERIALCRAFT_CLI`, else `materialcraft-cli` next to the crocwork Texture executable, else on `PATH`
 (the app is `$MATERIALCRAFT` / `materialcraft`). Baked maps feed graph input nodes whose identifier
 matches the map's shared id (`ambientOcclusion`, `curvature`, `thickness`, `position`,
 `worldNormal`, `normal`, `height`, `id`, `bentNormal`, `opacity`, `colorMap`, `worldDirection`;
@@ -348,7 +348,7 @@ OpenGL convention, `roughness`, `metallic`, `height`, `ambientOcclusion`, `emiss
 ## CLI
 
 ```sh
-texturecraft-cli --version                                   # TextureCraft 0.1.0 (abc1234 2026-10-14)
+texturecraft-cli --version                                   # crocwork Texture 0.1.0 (abc1234 2026-10-14)
 texturecraft-cli info model.glb                              # triangles, materials, UV report
 texturecraft-cli info project.tcraft                         # texture sets, layers, baked maps
 texturecraft-cli commands --filter mask

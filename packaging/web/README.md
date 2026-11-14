@@ -1,4 +1,4 @@
-# Hosting TextureCraft for the web
+# Hosting crocwork Texture for the web
 
 `texturecraft-web-<version>.zip` (from the GitHub release, or `packaging/web/package.sh`) holds a
 static site in `texturecraft-web-<version>/`:
@@ -59,7 +59,7 @@ Local test: `python3 -m http.server 8765` inside the folder, then open http://lo
 ```html
 <iframe
   src="https://example.com/texturecraft/"
-  title="TextureCraft 3D texture painter"
+  title="crocwork Texture 3D texture painter"
   style="width: 100%; height: 720px; border: 0;"
   allow="fullscreen; clipboard-read; clipboard-write"
   allowfullscreen>
@@ -76,7 +76,7 @@ Local test: `python3 -m http.server 8765` inside the folder, then open http://lo
 
 ## Renderer selection and fallback flags
 
-TextureCraft renders with wgpu. It uses **WebGPU** when the browser has it and falls back to
+crocwork Texture renders with wgpu. It uses **WebGPU** when the browser has it and falls back to
 **WebGL2** on its own. URL query flags override this, and they work on the iframe `src` too:
 
 | Flag | Effect |

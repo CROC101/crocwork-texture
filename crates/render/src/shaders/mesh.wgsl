@@ -1,4 +1,4 @@
-// TextureCraft viewport shaders: metal/roughness (or specular/glossiness) PBR with image-based
+// crocwork Texture viewport shaders: metal/roughness (or specular/glossiness) PBR with image-based
 // lighting and optional parallax occlusion mapping, plus the optional lobes of the extra channels
 // (clear coat with its own normal, sheen, anisotropy, subsurface scattering, transmission; packing
 // in compose/src/display.rs), the G-buffer of the depth of field and subsurface blur passes, the

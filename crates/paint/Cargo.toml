@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-paint"
-description = "TextureCraft brush engine: strokes, stamps, visibility, texture-space rasterization, commit"
+description = "crocwork Texture brush engine: strokes, stamps, visibility, texture-space rasterization, commit"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

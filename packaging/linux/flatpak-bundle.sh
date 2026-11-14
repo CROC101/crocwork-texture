@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Repackage a TextureCraft Linux tarball as a single-file Flatpak bundle:
+# Repackage a crocwork Texture Linux tarball as a single-file Flatpak bundle:
 #
 #   $DIST/texturecraft-<version>-linux-<arch>.flatpak
 #
@@ -11,7 +11,7 @@
 # `appstreamcli compose`; the freedesktop runtime and SDK named in the manifest are
 # installed per-user from Flathub. Unless --no-test, the bundle is then installed per-user and
 # `texturecraft-cli --version` is run inside the sandbox as a smoke test.
-# Manifest: packaging/linux/flatpak/ai.storyteller.TextureCraft.bundle.yml.
+# Manifest: packaging/linux/flatpak/ai.storyteller.crocwork Texture.bundle.yml.
 set -euo pipefail
 # shellcheck source=../env.sh
 . "$(dirname "${BASH_SOURCE[0]}")/../env.sh"
@@ -20,7 +20,7 @@ APP_ID=ai.storyteller.texturecraft
 FLATHUB=https://dl.flathub.org/repo/flathub.flatpakrepo
 # The OCI repository serves only the latest stable release, so a prerelease bundle gets no update
 # source: Flatpak would otherwise replace it with that older stable build.
-OCI_REPO=oci+https://getartcraft.com
+OCI_REPO=oci+https://github.com/CROC101/crocwork-texture
 if [[ "$VERSION" == *-* ]]; then OCI_REPO=""; fi
 
 TEST=1
@@ -49,14 +49,14 @@ for tool in flatpak flatpak-builder; do
   command -v "$tool" >/dev/null || { echo "error: $tool not found (apt install flatpak flatpak-builder librsvg2-common)" >&2; exit 1; }
 done
 
-echo "==> TextureCraft $VERSION Flatpak bundle for $ARCH from $(basename "$TARBALL")"
+echo "==> crocwork Texture $VERSION Flatpak bundle for $ARCH from $(basename "$TARBALL")"
 
 WORK="$CARGO_TARGET_DIR/flatpak-bundle"
 rm -rf "$WORK"
 mkdir -p "$WORK/stage"
 tar -xzf "$TARBALL" -C "$WORK/stage" --strip-components=1
 [[ -x "$WORK/stage/bin/texturecraft" ]] || { echo "error: $TARBALL has no bin/texturecraft" >&2; exit 1; }
-cp "$HERE/flatpak/ai.storyteller.TextureCraft.bundle.yml" "$WORK/$APP_ID.yml"
+cp "$HERE/flatpak/ai.storyteller.crocwork Texture.bundle.yml" "$WORK/$APP_ID.yml"
 
 flatpak remote-add --user --if-not-exists flathub "$FLATHUB"
 # --disable-rofiles-fuse: no FUSE in containers and CI runners.
@@ -73,7 +73,7 @@ if [[ -n "${SIGNING_FPR:-}" ]]; then
   if [[ "${OCI_SIGNATURES_READY:-}" != 1 ]]; then OCI_REPO=""; fi
 fi
 # --runtime-repo lets `flatpak install` fetch the freedesktop runtime from Flathub if missing.
-# --repo-url makes the installed origin update from the ArtCraft OCI repository.
+# --repo-url makes the installed origin update from the crocwork OCI repository.
 flatpak build-bundle --runtime-repo="$FLATHUB" ${OCI_REPO:+--repo-url="$OCI_REPO"} "${GPG_KEYS[@]}" "$WORK/repo" "$OUT" "$APP_ID" stable
 echo "wrote $OUT"
 if [[ "$OCI" = 1 ]]; then

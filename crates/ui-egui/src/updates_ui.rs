@@ -135,8 +135,8 @@ mod tests {
         let release = Release {
             tag: "v99.0.0".into(),
             version: craft_update::parse_version("99.0.0"),
-            name: "TextureCraft 99.0.0".into(),
-            html_url: "https://github.com/storytold/texturecraft/releases/tag/v99.0.0".into(),
+            name: "crocwork Texture 99.0.0".into(),
+            html_url: "https://github.com/CROC101/crocwork-texture/releases/tag/v99.0.0".into(),
             ..Default::default()
         };
         h.state_mut().updates_rt.updater.offer(release);

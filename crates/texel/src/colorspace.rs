@@ -2,7 +2,7 @@
 //!
 //! The conversion matrices are derived at first use from the published primaries and white points
 //! (ITU-R BT.709, ACES S-2014-004 for AP1, SMPTE ST 2065-1 for AP0) with Bradford chromatic
-//! adaptation, so nothing is copied from a colour-management library. TextureCraft's colour
+//! adaptation, so nothing is copied from a colour-management library. crocwork Texture's colour
 //! channels are linear Rec.709 internally; this module converts them for export.
 //!
 //! Only colour is converted. Data (normal, height, roughness...) has no colour space and never

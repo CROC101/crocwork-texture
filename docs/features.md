@@ -1,6 +1,6 @@
-# TextureCraft features
+# crocwork Texture features
 
-Everything TextureCraft does today, by area. What's still missing is in [`ROADMAP.md`](../ROADMAP.md).
+Everything crocwork Texture does today, by area. What's still missing is in [`ROADMAP.md`](../ROADMAP.md).
 
 ## Paint in 3D
 
@@ -67,7 +67,7 @@ Everything TextureCraft does today, by area. What's still missing is in [`ROADMA
 - **Your own library:** right-click a layer or folder, choose *Create smart material*, and it
   appears under *My smart materials*, pixels and images included.
 - **MaterialCraft materials:** *File › Import material*, a drop on the window, or MaterialCraft's
-  *File › Send to TextureCraft* (it lands under *My smart materials*) adds a `.mcmat` portable
+  *File › Send to crocwork Texture* (it lands under *My smart materials*) adds a `.mcmat` portable
   material, or a `.mcraft` package, as a fill layer. Its exposed graph inputs (numbers, vectors,
   toggles, options, colors) and presets show in the layer's properties; every change re-cooks
   the maps through MaterialCraft's command line at the texture set's resolution, on a worker
@@ -145,7 +145,7 @@ Everything TextureCraft does today, by area. What's still missing is in [`ROADMA
 - A **start window** at launch: a new project, a project file, a recent project or the sample
   (Settings › Interface › Start window).
 - A **data folder** of your choice for autosaves, smart materials, presets, templates and UI
-  layouts, on any drive (Settings › Folders; `Documents/TextureCraft` by default).
+  layouts, on any drive (Settings › Folders; `Documents/crocwork Texture` by default).
 - A **shortcut editor** with conflict detection, and every shortcut shown in its tooltip.
 - A **History** panel: click any step to go back to it, or forward again to an undone one.
 - **10 languages:** English, French, German, Spanish, Portuguese, Italian, Japanese, Chinese,

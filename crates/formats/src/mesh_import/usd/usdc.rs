@@ -163,7 +163,7 @@ pub(super) fn read(bytes: &[u8], budget: &mut Budget) -> Result<Layer> {
     let [major, minor, patch] = boot.array::<3>()?;
     let ver = (major, minor, patch);
     if ver < MIN_VERSION {
-        return Err(FormatError::Unsupported(format!("USD Crate version {major}.{minor}.{patch} (TextureCraft reads 0.4.0 and newer)")));
+        return Err(FormatError::Unsupported(format!("USD Crate version {major}.{minor}.{patch} (crocwork Texture reads 0.4.0 and newer)")));
     }
     boot.seek(16)?;
     let mut toc = Cur { b: bytes, pos: 0 };

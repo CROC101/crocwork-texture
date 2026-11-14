@@ -1,6 +1,6 @@
 # Interface translations
 
-TextureCraft uses the `craft-i18n` runtime from craft-libs and optional catalogs from
+crocwork Texture uses the `craft-i18n` runtime from craft-libs and optional catalogs from
 [craft-i18n](https://github.com/storytold/craft-i18n).
 
 Set `CRAFT_I18N_DIR` to the absolute path of a craft-i18n checkout before building.
@@ -26,4 +26,4 @@ CRAFT_I18N_REQUIRED=1. No application workflow changes are needed.
 
 The catalog commit must be available in storytold/craft-i18n before merging the app cutover.
 After a squash or rebase merge of the companion catalog PR, update the pin to the resulting
-upstream commit and rerun validation before merging TextureCraft.
+upstream commit and rerun validation before merging crocwork Texture.

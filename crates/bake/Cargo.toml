@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-bake"
-description = "TextureCraft mesh-map baking: high-poly transfer (cage, match by name) of normal, height, AO, bent normals, curvature, thickness, ID, opacity, color, position and world-space maps"
+description = "crocwork Texture mesh-map baking: high-poly transfer (cage, match by name) of normal, height, AO, bent normals, curvature, thickness, ID, opacity, color, position and world-space maps"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

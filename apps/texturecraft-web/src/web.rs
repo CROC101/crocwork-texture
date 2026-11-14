@@ -29,9 +29,9 @@ pub fn start() {
             match result {
                 Ok(()) => el.remove(),
                 Err(e) => {
-                    log::error!("TextureCraft failed to start: {e}");
+                    log::error!("crocwork Texture failed to start: {e}");
                     el.set_text_content(Some(&format!(
-                        "TextureCraft failed to start: {e}. It needs a browser with WebGPU (current Chrome, Edge or Safari) or at least WebGL2."
+                        "crocwork Texture failed to start: {e}. It needs a browser with WebGPU (current Chrome, Edge or Safari) or at least WebGL2."
                     )));
                 }
             }
@@ -59,7 +59,7 @@ async fn run(canvas: web_sys::HtmlCanvasElement) -> Result<(), String> {
                 app.ui.windows.start = app.ui.prefs.start_window;
                 if let Some(rs) = &cc.wgpu_render_state {
                     let backend = rs.adapter.get_info().backend;
-                    log::info!("TextureCraft: wgpu backend {backend:?}");
+                    log::info!("crocwork Texture: wgpu backend {backend:?}");
                     if backend == eframe::wgpu::Backend::Gl {
                         app.banner = Some(texturecraft_ui_egui::WEBGL_NOTICE);
                     }

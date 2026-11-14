@@ -1,6 +1,6 @@
 # texturecraft-automation
 
-Agent-facing automation for TextureCraft (layer L4: engine, render and formats; no UI toolkit).
+Agent-facing automation for crocwork Texture (layer L4: engine, render and formats; no UI toolkit).
 The protocol and tool reference is [`docs/control-protocol.md`](../../docs/control-protocol.md).
 
 ## Public API

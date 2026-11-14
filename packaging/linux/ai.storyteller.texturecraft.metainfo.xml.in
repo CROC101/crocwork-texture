@@ -5,14 +5,14 @@
   <id>ai.storyteller.texturecraft</id>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>MIT OR Apache-2.0</project_license>
-  <name>TextureCraft</name>
+  <name>crocwork Texture</name>
   <summary>Paint PBR textures directly on 3D meshes</summary>
   <developer id="ai.storyteller">
-    <name>Learning Machines LLC</name>
+    <name>crocwork</name>
   </developer>
   <description>
     <p>
-      TextureCraft is an open-source, native 3D texture painter that works the way texture artists
+      crocwork Texture is an open-source, native 3D texture painter that works the way texture artists
       expect: familiar menus, shortcuts, panels and tools, with texture sets,
       layers, masks, fills and effects painted straight onto the model.
     </p>
@@ -26,10 +26,10 @@
   <launchable type="desktop-id">ai.storyteller.texturecraft.desktop</launchable>
   <icon type="stock">ai.storyteller.texturecraft</icon>
   <!-- Only url types known to appstream 0.15 (Ubuntu 22.04, where CI validates): no vcs-browser. -->
-  <url type="homepage">https://getartcraft.com/apps/texturecraft</url>
-  <url type="bugtracker">https://github.com/storytold/texturecraft/issues</url>
-  <url type="help">https://github.com/storytold/texturecraft</url>
-  <url type="contact">https://discord.gg/artcraft</url>
+  <url type="homepage">https://github.com/CROC101/crocwork-texture</url>
+  <url type="bugtracker">https://github.com/CROC101/crocwork-texture</url>
+  <url type="help">https://github.com/CROC101/crocwork-texture</url>
+  <url type="contact">https://github.com/CROC101/crocwork-texture</url>
   <categories>
     <category>Graphics</category>
     <category>3DGraphics</category>

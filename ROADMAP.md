@@ -1,6 +1,6 @@
-# TextureCraft roadmap
+# crocwork Texture roadmap
 
-TextureCraft aims for 1:1 parity with Adobe Substance 3D Painter's texturing workflow, with better
+crocwork Texture aims for 1:1 parity with Adobe Substance 3D Painter's texturing workflow, with better
 performance, a smaller footprint, every feature drivable by agents (MCP, CLI, control channel), and
 builds for Windows, macOS, Linux, FreeBSD and the web.
 

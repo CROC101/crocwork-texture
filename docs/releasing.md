@@ -1,7 +1,7 @@
-# Releasing TextureCraft
+# Releasing crocwork Texture
 
 The recipe is the [release playbook](release-playbook.md); this page covers what is
-specific to TextureCraft. The pipeline is [`.github/workflows/release.yml`](../.github/workflows/release.yml).
+specific to crocwork Texture. The pipeline is [`.github/workflows/release.yml`](../.github/workflows/release.yml).
 
 ## Release manager checklist
 
@@ -79,7 +79,7 @@ gh run view $RID -R storytold/texturecraft --log | grep -E "status: Accepted|sta
 - Every job is green, and no `::warning::` names a missing secret (that platform shipped unsigned:
   fix the secret and re-run, don't publish).
 - macOS: two `The staple and validate action worked!` lines (app and DMG) and `status: Accepted`.
-- The draft `TextureCraft v<version>` exists, targets the commit you pushed, and carries every
+- The draft `crocwork Texture v<version>` exists, targets the commit you pushed, and carries every
   file in the table below plus `SHA256SUMS.txt`.
 - Download, check and launch at least one artifact per platform:
   - Windows: `signtool verify /pa /v texturecraft-<v>-windows-x64.msi` succeeds and names the
@@ -119,7 +119,7 @@ notices. The packaging
 scripts smoke-test `texturecraft-cli --version`, and the Linux job also runs the AppImage with
 `--version`, so both binaries must print their version and exit without opening a window.
 
-## TextureCraft-specific values
+## crocwork Texture-specific values
 
 | What | Value |
 |---|---|
@@ -127,7 +127,7 @@ scripts smoke-test `texturecraft-cli --version`, and the Linux job also runs the
 | Project format | `.tcraft`, MIME `application/x-texturecraft`, UTI `ai.storyteller.texturecraft.project` (owned) |
 | Also opens | `.glb .gltf .fbx .dae .usd .usda .usdc .usdz .abc .obj .ply .stl` (formats `mesh_import::MESH_EXTENSIONS`; "Open with" only, never the default app). Declared in `texturecraft.wxs`, `Info.plist.in`, the `.desktop` file, `mime.xml` and the AppStream metainfo: keep all five in step |
 | WiX UpgradeCode | `7E670E60-BB22-4E6B-8749-DD3FD4CA8979`, never change it |
-| Flathub manifest | `packaging/linux/flatpak/ai.storyteller.TextureCraft.yml` (release bundle: `…TextureCraft.bundle.yml`) |
+| Flathub manifest | `packaging/linux/flatpak/ai.storyteller.crocwork Texture.yml` (release bundle: `…crocwork Texture.bundle.yml`) |
 | macOS minimum | 11.0 (`LSMinimumSystemVersion`, `MACOSX_DEPLOYMENT_TARGET`) |
 
 ## Version and build info in the binaries
@@ -141,7 +141,7 @@ scripts smoke-test `texturecraft-cli --version`, and the Linux job also runs the
   or `SOURCE_DATE_EPOCH`'s for reproducible builds.
 
 On Windows targets it also embeds `assets/app-icon/texturecraft.ico` and VERSIONINFO
-(ProductName TextureCraft); `package.ps1` sets `TEXTURECRAFT_REQUIRE_WINRES=1` so a release can't
+(ProductName crocwork Texture); `package.ps1` sets `TEXTURECRAFT_REQUIRE_WINRES=1` so a release can't
 ship an exe without them. The version itself is `CARGO_PKG_VERSION`.
 
 Other environment variables the scripts read: `TEXTURECRAFT_VERSION` (override the version),

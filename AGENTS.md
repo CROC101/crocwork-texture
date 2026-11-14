@@ -53,11 +53,11 @@ Dependencies and assets use SPDX identifiers. An expression is allowed when ever
 
 # AGENTS.md: guide for AI agents and contributors
 
-TextureCraft is an open-source, native 3D texture painter: a clean-room implementation of the
+crocwork Texture is an open-source, native 3D texture painter: a clean-room implementation of the
 workflow known from Adobe Substance 3D Painter, written in **Rust only** (no JavaScript or TypeScript). **No Tauri, Electron or webview
 shells:** the desktop app is native egui/eframe on wgpu, and the web build is the same Rust compiled
 to WebAssembly (trunk + wasm-bindgen). Never add Tauri (or any webview/JS UI framework) as a
-dependency, build step or packaging target. The product name is always written **TextureCraft**
+dependency, build step or packaging target. The product name is always written **crocwork Texture**
 (`{Function}Craft` in PascalCase, like its siblings PhotoCraft, VectorCraft, FilmCraft, LightCraft,
 PdfCraft, EffectCraft, DesignCraft) in user-facing text: UI, window titles, About, installers,
 release names, docs prose. Machine names stay lowercase: crates (`texturecraft-*`), binaries, file
@@ -110,7 +110,7 @@ replace it without touching the engine.
 
 ### Never name the reference product (absolutely essential)
 
-- The repository never names the commercial product TextureCraft is modeled on, nor its vendor,
+- The repository never names the commercial product crocwork Texture is modeled on, nor its vendor,
   in code, comments, docs, commit messages, test names, file names or UI text. Say "the reference
   app", "the professional model-painter workflow" or describe the feature itself.
 - Notes that name it may live only in the gitignored `plan/` folder or in this `AGENTS.md` file
@@ -123,30 +123,30 @@ replace it without touching the engine.
   environments, UI icons). Not as reference files in the repo either.
 - Every image or icon must be **open source, public domain, Creative Commons (CC0/CC-BY), or
   original** (made by a contributor who has the right to license it). Prefer generating content in
-  code (TextureCraft's environments, materials, alphas, meshes and thumbnails are all procedural).
+  code (crocwork Texture's environments, materials, alphas, meshes and thumbnails are all procedural).
 - **Every bundled asset gets a row in [`ATTRIBUTION.md`](ATTRIBUTION.md)** (path, title, author,
   source, license) **in the same change that adds it**, plus its license file next to it when the
   license requires one. Assets compiled in through dependencies (icon fonts, default fonts) get a
   row too. No row, no merge.
-- Demo images and README screenshots show TextureCraft rendering original or public-domain content
+- Demo images and README screenshots show crocwork Texture rendering original or public-domain content
   only. Never personal photos.
-- The ArtCraft logos in `docs/brand/` are not open source (`docs/brand/LICENSE-brand.txt`).
+- The crocwork logos in `docs/brand/` are not open source (`docs/brand/LICENSE-brand.txt`).
 - Fonts live in [storytold/craft-fonts](https://github.com/storytold/craft-fonts); never commit font
   files here.
 
 ### Clean room
 
-TextureCraft is an independent, clean-room implementation of a professional texture-painting
+crocwork Texture is an independent, clean-room implementation of a professional texture-painting
 workflow. Work from public documentation, general domain knowledge, public algorithms
 (GGX/Smith/Schlick, split-sum IBL, MikkTSpace, jump-flood/BFS dilation, Möller–Trumbore, SAH BVH,
 spherical harmonics, reoriented normal mapping, W3C blend modes) and public engine conventions
 (glTF, Unreal, Unity packing). Never copy proprietary code, shaders, presets or file formats;
-Painter file compatibility (`.spp`, `.spexp`, `.sbsar`) is a non-goal. Always describe TextureCraft
+Painter file compatibility (`.spp`, `.spexp`, `.sbsar`) is a non-goal. Always describe crocwork Texture
 as a clean-room implementation, in code, docs and commits.
 
 ### Never crash (outranks feature work)
 
-People trust TextureCraft with hours of painting. A malformed mesh or project, a bad command or MCP
+People trust crocwork Texture with hours of painting. A malformed mesh or project, a bad command or MCP
 param, an odd keystroke or a full disk must produce an error the user or agent can act on, never a
 panic.
 
@@ -196,7 +196,7 @@ panic.
 
 1. `ROADMAP.md` → **Current focus** and the parity table.
 2. `docs/parity.md` → missing menu items, grouped by menu.
-3. Run the app, take screenshots of TextureCraft and fix the biggest visible gaps in the workflow.
+3. Run the app, take screenshots of crocwork Texture and fix the biggest visible gaps in the workflow.
 4. `log/devlog.md` (local) → the "Still open" bullets of recent entries.
 
 ## 5. Before you finish a task

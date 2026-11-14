@@ -117,7 +117,7 @@ impl Panel {
     }
 }
 
-/// The saved panel arrangement: craft-ui's workspace over TextureCraft's panels.
+/// The saved panel arrangement: craft-ui's workspace over crocwork Texture's panels.
 pub type Workspace = craft_ui::docking::Workspace<Panel>;
 
 /// The viewport never moves, floats, closes or takes tabs; panels dock beside it.

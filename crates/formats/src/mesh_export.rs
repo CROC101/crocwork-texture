@@ -40,7 +40,7 @@ pub fn obj_with_mtl(mesh: &Mesh, name: &str, stem: &str, textures: &[Vec<Exporte
         format!("{clean}_{hash:08x}")
     };
     let (maps, mut files) = usd::material_maps(mesh, &stem, textures);
-    let mut mtl = format!("# {}, exported by TextureCraft\n", token(name));
+    let mut mtl = format!("# {}, exported by crocwork Texture\n", token(name));
     for (material, maps) in unique_ids(&mesh.materials, token).iter().zip(&maps) {
         let _ = writeln!(mtl, "\nnewmtl {material}\nKd 1 1 1");
         for (slot, file) in maps {
@@ -68,7 +68,7 @@ pub fn obj_with_mtl(mesh: &Mesh, name: &str, stem: &str, textures: &[Vec<Exporte
 
 fn obj_text(mesh: &Mesh, name: &str, mtllib: Option<&str>) -> String {
     let mut text = String::with_capacity(mesh.positions.len() * 96 + mesh.indices.len() * 12);
-    let _ = writeln!(text, "# {}, exported by TextureCraft", token(name));
+    let _ = writeln!(text, "# {}, exported by crocwork Texture", token(name));
     if let Some(lib) = mtllib {
         let _ = writeln!(text, "mtllib {lib}");
     }
@@ -342,7 +342,7 @@ pub fn glb_bytes(mesh: &Mesh, name: &str, textures: &[GlbTextures]) -> Result<Ve
     let none = GlbTextures::default();
     let materials: Vec<Value> = mesh.materials.iter().enumerate().map(|(i, m)| g.material(m, textures.get(i).unwrap_or(&none))).collect();
     let mut doc = json!({
-        "asset": { "version": "2.0", "generator": "TextureCraft" },
+        "asset": { "version": "2.0", "generator": "crocwork Texture" },
         "scene": 0,
         "scenes": [{ "nodes": [0] }],
         "nodes": [{ "mesh": 0, "name": name }],

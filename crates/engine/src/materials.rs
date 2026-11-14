@@ -1,6 +1,6 @@
 //! Built-in materials and smart materials: fill layers (and folders of fill layers with
 //! mesh-map-driven masks), all procedural (no bitmap assets), so they are original to
-//! TextureCraft and work at any resolution.
+//! crocwork Texture and work at any resolution.
 //!
 //! Values follow physically based conventions: metals are metallic 1 with base colors from
 //! published measured reflectance (F0) tables; dielectrics are metallic 0 with linear albedo

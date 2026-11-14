@@ -1,6 +1,6 @@
 # texturecraft-formats
 
-File formats for TextureCraft: mesh import and export, texture export with presets, and the
+File formats for crocwork Texture: mesh import and export, texture export with presets, and the
 `.tcraft` project file. Every reader takes untrusted bytes and returns `Result`; nothing panics on bad
 input. Byte-based functions work on every target (the web build loads and saves through bytes);
 path-based functions are native only (`#[cfg(not(target_arch = "wasm32"))]`).

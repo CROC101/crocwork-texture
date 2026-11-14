@@ -1,6 +1,6 @@
 # Localization
 
-TextureCraft's interface text goes through one lookup, `tr("English text")` in
+crocwork Texture's interface text goes through one lookup, `tr("English text")` in
 `crates/ui-egui/src/i18n.rs`: the English string is the key, so English needs no table and a
 missing translation falls back to English. Translations are embedded from the optional shared
 craft-i18n catalogs; see [integration and contribution instructions](internationalization.md).

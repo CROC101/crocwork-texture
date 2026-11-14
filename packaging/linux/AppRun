@@ -1,5 +1,5 @@
 #!/bin/sh
-# TextureCraft AppImage entry point (packaging/linux/AppRun; installed by package.sh).
+# crocwork Texture AppImage entry point (packaging/linux/AppRun; installed by package.sh).
 #
 # On Wayland the compositor resolves a window's dock icon by taking the window's
 # app_id (ai.storyteller.texturecraft) and looking up an installed .desktop file.

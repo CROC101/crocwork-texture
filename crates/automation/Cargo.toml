@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-automation"
-description = "TextureCraft automation: MCP server (rmcp), headless JSON-lines RPC and a bridge to the running app"
+description = "crocwork Texture automation: MCP server (rmcp), headless JSON-lines RPC and a bridge to the running app"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

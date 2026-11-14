@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-engine"
-description = "TextureCraft session, command registry, painting, baking and inspection"
+description = "crocwork Texture session, command registry, painting, baking and inspection"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

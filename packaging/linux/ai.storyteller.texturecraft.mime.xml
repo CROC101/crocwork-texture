@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- shared-mime-info definitions for TextureCraft's project format and the mesh formats it opens,
+<!-- shared-mime-info definitions for crocwork Texture's project format and the mesh formats it opens,
      for systems whose database is missing them (shared-mime-info merges duplicate definitions).
      Installed to /usr/share/mime/packages/ (update-mime-database runs on install). -->
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
   <mime-type type="application/x-texturecraft">
-    <comment>TextureCraft project</comment>
+    <comment>crocwork Texture project</comment>
     <sub-class-of type="application/zip"/>
     <icon name="ai.storyteller.texturecraft"/>
     <glob pattern="*.tcraft" weight="60"/>

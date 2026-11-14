@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft-render"
-description = "TextureCraft wgpu viewport renderer: PBR, image-based lighting, debug views, UV view"
+description = "crocwork Texture wgpu viewport renderer: PBR, image-based lighting, debug views, UV view"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

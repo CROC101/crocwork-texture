@@ -1,6 +1,6 @@
 [package]
 name = "texturecraft"
-description = "TextureCraft: an open-source 3D texture painter (desktop app)"
+description = "crocwork Texture: an open-source 3D texture painter (desktop app)"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

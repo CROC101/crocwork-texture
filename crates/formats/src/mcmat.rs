@@ -1,7 +1,7 @@
 //! MaterialCraft portable materials (`.mcmat`, read only): a zip with `material.json` (the
 //! manifest: maps by usage, exposed parameters, image inputs, presets), `maps/<usage>.png`
 //! (8-bit sRGB for color usages, 16-bit linear otherwise; OpenGL normals) and the source
-//! `.mcraft` package. TextureCraft keeps its own reader (the apps share the format, not code).
+//! `.mcraft` package. crocwork Texture keeps its own reader (the apps share the format, not code).
 //!
 //! Also the 16-bit PNG encoder that hands baked mesh maps to MaterialCraft as graph inputs.
 
