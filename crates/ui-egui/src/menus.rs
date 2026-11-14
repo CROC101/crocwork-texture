@@ -175,7 +175,7 @@ pub fn invoke(app: &mut TextureCraftApp, ctx: &egui::Context, id: &str) {
         "ui.about" => app.ui.windows.about = true,
         #[cfg(not(target_arch = "wasm32"))]
         "ui.help.checkForUpdates" => crate::updates_ui::request_check(app, ctx),
-        "ui.help.discord" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-texture")),
+        "ui.help.discord" => ctx.open_url(egui::OpenUrl::new_tab("https://discord.gg/sNYsVbh3v")),
         "ui.help.website" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-texture")),
         "ui.help.docs" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-texture#readme")),
         "ui.help.bug" => ctx.open_url(egui::OpenUrl::new_tab("https://github.com/CROC101/crocwork-texture")),
