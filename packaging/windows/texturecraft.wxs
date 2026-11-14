@@ -4,7 +4,7 @@
 
     wix build texturecraft.wxs -arch x64 -d Version=1.2.3 -d BinDir=... -d IconPath=... -o out.msi
 
-  Per-machine install into Program Files, a Start Menu shortcut, `.tcraft` owned by crocwork Texture,
+  Per-machine install into Program Files, a Start Menu shortcut, `.tcraft` owned by TextureCraft,
   and crocwork Texture offered under "Open with" for the mesh formats it opens (without taking over
   the user's default app for them).
 
@@ -56,17 +56,17 @@
         </File>
 
         <!-- .tcraft: crocwork Texture's own project format; crocwork Texture is its default app. -->
-        <ProgId Id="crocwork Texture.Project" Description="crocwork Texture Project" Icon="TextureCraftExe" IconIndex="0">
+        <ProgId Id="TextureCraft.Project" Description="crocwork Texture Project" Icon="TextureCraftExe" IconIndex="0">
           <Extension Id="tcraft" ContentType="application/x-texturecraft">
             <Verb Id="open" Command="Open" TargetFile="TextureCraftExe" Argument="&quot;%1&quot;" />
           </Extension>
         </ProgId>
         <!-- Meshes (formats mesh_import::MESH_EXTENSIONS): offered under "Open with", never forced
              as the default. -->
-        <ProgId Id="crocwork Texture.Mesh" Description="3D Model" Icon="TextureCraftExe" IconIndex="0" />
-        <RegistryValue Root="HKLM" Key="Software\Classes\crocwork Texture.Mesh\shell\open\command" Value="&quot;[#TextureCraftExe]&quot; &quot;%1&quot;" Type="string" />
+        <ProgId Id="TextureCraft.Mesh" Description="3D Model" Icon="TextureCraftExe" IconIndex="0" />
+        <RegistryValue Root="HKLM" Key="Software\Classes\TextureCraft.Mesh\shell\open\command" Value="&quot;[#TextureCraftExe]&quot; &quot;%1&quot;" Type="string" />
         <?foreach Ext in $(var.MeshExtensions)?>
-        <RegistryValue Root="HKLM" Key="Software\Classes\.$(var.Ext)\OpenWithProgids" Name="crocwork Texture.Mesh" Value="" Type="string" />
+        <RegistryValue Root="HKLM" Key="Software\Classes\.$(var.Ext)\OpenWithProgids" Name="TextureCraft.Mesh" Value="" Type="string" />
         <?endforeach?>
 
         <!-- "Open with" app list and the Run dialog (Win+R "texturecraft"). -->

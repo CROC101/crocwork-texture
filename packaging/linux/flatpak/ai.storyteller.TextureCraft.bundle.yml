@@ -9,7 +9,7 @@
 # Wayland, xkbcommon and Vulkan at runtime; the freedesktop runtime has all of them, and the
 # GPU driver comes from its org.freedesktop.Platform.GL extension.
 #
-# ai.storyteller.crocwork Texture.yml (same directory) is the from-source manifest for Flathub. Keep
+# ai.storyteller.TextureCraft.yml (same directory) is the from-source manifest for Flathub. Keep
 # runtime-version and finish-args identical in both (packaging-lint checks this).
 id: ai.storyteller.texturecraft
 runtime: org.freedesktop.Platform

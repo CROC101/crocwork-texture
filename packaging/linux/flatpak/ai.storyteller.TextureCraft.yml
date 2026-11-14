@@ -4,11 +4,11 @@
 #
 #   curl -fsSLO https://raw.githubusercontent.com/flatpak/flatpak-builder-tools/master/cargo/flatpak-cargo-generator.py
 #   python3 flatpak-cargo-generator.py Cargo.lock -o packaging/linux/flatpak/cargo-sources.json
-#   flatpak-builder --user --install --force-clean build-flatpak packaging/linux/flatpak/ai.storyteller.crocwork Texture.yml
+#   flatpak-builder --user --install --force-clean build-flatpak packaging/linux/flatpak/ai.storyteller.TextureCraft.yml
 #   flatpak run ai.storyteller.texturecraft
 #
 # For Flathub, replace the `dir` source with a `git` source pinned to a release tag and commit.
-# The single-file .flatpak attached to each release comes from ai.storyteller.crocwork Texture.bundle.yml,
+# The single-file .flatpak attached to each release comes from ai.storyteller.TextureCraft.bundle.yml,
 # which repackages the prebuilt release binaries. Keep runtime-version and finish-args identical.
 id: ai.storyteller.texturecraft
 runtime: org.freedesktop.Platform
